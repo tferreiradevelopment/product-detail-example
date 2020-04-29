@@ -1,0 +1,287 @@
+:root{
+    --primary:#2175f5;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #eaeaea;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+.card{
+    width: 800px;
+    max-height: 800px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.tennis-background{
+    width: 400px;
+    height: 450px;
+    position: relative;
+    box-shadow: -8px 0px 17px 0px #888;
+    transition: .5s;
+}
+.shoe {
+    display: none;
+    width: 100%;
+    transform: rotate(-20deg);
+    position: absolute;
+    top: 25%;
+}
+.shoe.show {
+    display: block;
+}
+
+
+.gradients {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.btn-share {
+    position: absolute;
+    color: #fff;
+    top: 4%;
+    right: 4%;
+}
+.gradients{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
+.first{
+    z-index: 0;
+    animation: 1s width ease;
+}
+@keyframes width{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.second{
+    z-index: -1 !important;
+}
+.gradient[color="blue"]{
+    background-image: linear-gradient(45deg, #0136af, #22abfa);
+}
+.gradient[color="red"]{
+    background-image: linear-gradient(45deg, #d62926, #ee625f);
+}
+
+.gradient[color="green"]{
+    background-image: linear-gradient(45deg, #11998e, #1ce669);
+}
+
+.gradient[color="orange"]{
+    background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
+}
+
+.gradient[color="black"]{
+    background-image: linear-gradient(45deg, #111, #666);
+}
+.shoe.show{
+    display: block;
+}
+.product-info{
+    background-color: #fff;
+    width: 400px;
+    padding: 15px;
+    color:#333;
+    box-shadow: 8px 0px 17px 0px #888;
+}
+.shoe-name > div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.big{
+    padding: 0px;
+    margin: 0;
+}
+h3{
+    padding: 0;
+    margin:0;
+    font-weight: 400;
+}
+.shoe-name h3{
+    margin-bottom: 20px;
+}
+.new {
+    width: auto;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 3px 7px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+}
+.nike {
+    position: absolute;
+    top: -19%;
+    left: 4%;
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.1);
+}
+.description .title, .color-container .title, .size-container .title{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.product-info .description, .color-container, .size-container, .buy-price{
+    border-top: 1px solid #dadada;
+    padding: 5px 0px;
+}
+.color[color="blue"]{
+    background-color: #2175f5;
+}
+.color[color="red"]{
+    background-color: #f84848;
+}
+.color[color="green"]{
+    background-color: #29b864;
+}
+.color[color="orange"]{
+    background-color: #ff5521;
+}
+.color[color="black"]{
+    background-color: #444;
+}
+.color-container{
+    padding: 10px 0;
+}
+
+.colors{
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.color{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 0px solid;
+    cursor: pointer;
+    transition: .5s;
+}
+.buy{
+    padding: .7rem 1rem;
+    background-color: var(--primary);
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: .5s;
+    height: 25px;
+    transition: 0.3s;
+}
+.buy-price {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.buy:hover{
+    transform: scale(1.1);
+}
+
+.buy i{
+    margin-right: 2px;
+}
+.color.active{
+    box-shadow: 0px 0px 9px 1px #333;
+    transform: scale(1.1);
+}
+.size-container{
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.sizes{
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.size{
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #eee;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.size.active{
+    background-color: var(--primary);
+    color: #fff;
+    transition: .5s;
+}
+.buy-price h1{
+    padding: 0;
+    margin: 0;
+}
+
+.price{
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+}
+
+.price h1{
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.price i{
+    font-size: 1.4rem;
+    margin-right: 1px;
+}
